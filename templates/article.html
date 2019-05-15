@@ -10,6 +10,8 @@
 		</span>
 		<time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time>
 	</div>
+	<div itemprop="articleBody" class="article-body">{{ article.content }}</div>
+	<hr>
 	{% if article.category %}
 	<div>
 		Category:
@@ -28,7 +30,5 @@
 		{% endfor %}
 	</div>
 	{% endif %}
-	<div itemprop="articleBody" class="article-body">{{ article.content }}</div>
-	<hr>
 </div>
 {% endblock %}

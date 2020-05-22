@@ -22,7 +22,8 @@
 	{% block head %}{% endblock %}
 </head>
 <body>
-<div id="toc"></div>
+{% if article and article.tocify %}<div id="toc"></div>{% endif %}
+{% if page and page.tocify %}<div id="toc"></div>{% endif %}
 <div class="container">
 	<div class="page-header">
 		<div class="row">
@@ -124,9 +125,14 @@ jQuery(document).ready(function($) {
 	});
 });
 $(function() { 
-	var toc = $("#toc").tocify({context:"div.article-body", selectors:"h1,h3"}).data("toc-tocify"); 
-	toc.setOption("showAndHide","false");
-	toc.setOption("extendPage","false");
+	var toc = $("#toc").tocify({
+		context:"div.article-body", 
+		selectors:"h1,h3",
+		showAndHide:"false",
+		extendPage:"false",
+		history:"true",
+		scrollHistory:"true"
+	}).data("toc-tocify"); 
 
 });
 </script>

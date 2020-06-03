@@ -18,6 +18,11 @@
     margin-top: 7%;
 }
 
+/* The Table of Contents items */
+li.active.tocify-item a {
+    background-color: #428bca;
+}
+
 /* Do not show Table of Contents on small screens. */
 @media screen and (max-width: 1800px) {
   .tocify {

@@ -2,11 +2,11 @@
  * Overrides of colors of bootstrap
 **/
 .bg-danger {
-	background-color: #eeeeee;
+    background-color: #eeeeee;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 
@@ -19,10 +19,9 @@ a:hover {
 }
 
 .aw-footer {
-    margin-top: 2em;
     border-top: 2px solid lightgrey;
     border-bottom: 2px solid lightgrey;
-/*    height: 250px;*/
+    height: 350px;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -57,71 +56,76 @@ a:hover {
  * Overrides of notebook CSS for static HTML export
 **/
 div.entry-content {
-	overflow: visible;
-	padding: 8px;
+    overflow: visible;
+    padding: 8px;
 }
 
 .inner_cell {
-	width: 100%;
+    width: 100%;
 }
 
 .input_area {
-	padding: 0.2em;
+    padding: 0.2em;
 }
 
 a.heading-anchor {
-	white-space: normal;
+    white-space: normal;
 }
 
 .rendered_html code {
-	font-size: .8em;
+    font-size: .8em;
 }
 
 pre.ipynb {
-	color: black;
-	background: #f7f7f7;
-	border: none;
-	box-shadow: none;
-	margin-bottom: 0;
-	padding: 0;
-	margin: 0px;
-	font-size: 13px;
+    color: black;
+    background: #f7f7f7;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0px;
+    font-size: 13px;
 }
 
 /* remove the prompt div from text cells */
 .prompt {
-	display: none;
+    display: none;
 }
 
 /* remove horizontal padding from text cells, */
 /* so it aligns with outer body text */
 div.text_cell_render {
-	padding: 0.5em 0em;
+    padding: 0.5em 0em;
 }
 
 img.anim_icon {
-	padding: 0;
-	border: 0;
-	vertical-align: middle;
-	-webkit-box-shadow: none;
-	-box-shadow: none;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    -webkit-box-shadow: none;
+    -box-shadow: none;
 }
 
 div.collapseheader {
-	width: 100%;
-	background-color: #d3d3d3;
-	padding: 2px;
-	cursor: pointer;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 100%;
+    background-color: #d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 /**
  * Overrides the design of the header links.
 **/
 
+.page-header {
+    padding-left: 15px;
+    border-bottom: 1px solid #aaa;
+}
+
 .page-header-links {
-	margin-top: 30px;
-	margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 /**
@@ -129,7 +133,39 @@ div.collapseheader {
 **/
 
 div.article-body p img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+ * Add background pattern image and correct background styling
+**/
+body {
+    background-image: url("../images/background/chevron.png");
+    background-repeat: repeat;
+}
+
+.container {
+    background-color: white;
+    border-left: 1px #eeeeee solid;
+    border-right: 1px #eeeeee solid;
+    box-shadow: 1px 2px 3px #aaaaaa, -1px 2px 3px #aaaaaa;
+    /* min-height: 800px; */
+    padding-bottom: 15px;
+}
+
+footer.container {
+    background-color: #eeeeee;
+}
+
+.bottom.container {
+    width: 100%;
+    background-color: white;
+}
+
+/* Styling for image captions in posts */
+.caption {
+    font-style: italic;
+    color: #555555;
 }

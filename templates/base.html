@@ -12,6 +12,7 @@
 		<![endif]-->
 	<link href="{{ SITEURL }}/theme/css/ipython.css" rel="stylesheet">
 	<link href="{{ SITEURL }}/theme/css/jquery.tocify.css" rel="stylesheet">
+	<link href="{{ SITEURL }}/theme/css/lightbox.css" rel="stylesheet">
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<!--
@@ -43,7 +44,7 @@
 	</div> {# End row #}
 	<!-- <hr> -->
 </div> <!-- /container -->
-<footer class="aw-footer bg-danger">
+<footer class="aw-footer container bg-danger">
 	<div class=""> <!-- footer -->
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
@@ -66,14 +67,6 @@
 							{% if FEED_ALL_RSS %}
 							<li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml"><i class="fa fa-rss "></i> rss</a></li>
 							{% endif %}
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<h4>Author</h4>
-						<ul class="list-unstyled my-list-style">
-						{% for name, link in SOCIAL %}
-							<li><a href="{{ link }}">{{ name }}</a></li>
-						{% endfor %}
 						</ul>
 					</div>
 					<div class="col-md-3">
@@ -111,6 +104,7 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/jquery-ui-1.9.1.custom.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/jquery.tocify.min.js""></script>
+<script src="{{ SITEURL }}/theme/js/lightbox.js""></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
